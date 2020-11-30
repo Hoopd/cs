@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="nav">
+            <!-- <div class="nav-item">{{naArr[0]}}</div>
+            <div class="nav-item">{{naArr[1]}}</div>
+            <div class="nav-item">{{naArr[2]}}</div>
+            <div class="nav-item">{{naArr[3]}}</div>
+            <div class="nav-item">{{naArr[4]}}</div>
+            <div class="nav-item">{{naArr[5]}}</div> -->
+
+            <div class="nav-item" v-for="(item,index) in naArr" v-bind:key="item">{{item}}</div>
+        </div>
+    </div>
+    <script>
+        let md = new Vue({
+            el: ".app",
+            data: {
+                naArr: ["新闻", "首页", "热点", "头条", "电影", "图文"]
+            }
+        })
+    </script>
+</body>
+
+</html>

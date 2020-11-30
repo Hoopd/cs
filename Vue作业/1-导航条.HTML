@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-导航条</title>
+    <link rel="stylesheet" href="./1.css">
+    <script src="../node_modules/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="nav">
+            <!-- 左边 -->
+            <div class="left">
+                <div class="left-item" v-for="(item,index) in navs.navsLeft">
+                    {{item}}
+                </div>
+            </div>
+
+
+            <!-- 右边 -->
+            <div class="rig">
+                <div class="rig-item" v-for="(item,index) in navs.navsRig" v-html="item"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let vmp = new Vue({
+            el: "#app",
+            data: {
+                navs: {
+                    navsLeft: ["新闻", "首页", "热点", "头条", "电影", "图文"],
+                    navsRig:
+                        ["<span style='color:red'>抗击肺炎</span>",
+                            "设置", "<div style='height:30px;width:60px;line-height:30px;text-align:center;border-radius:5px;background-color:#5175ef;color:white;  margin-top:10px;'>登录</div>"]
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

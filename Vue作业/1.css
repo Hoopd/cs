@@ -1,0 +1,30 @@
+div.nav {
+  width: 50vw;
+  display: flex;
+  height: 50px;
+  border: 1px solid #ccc;
+  line-height: 50px;
+  text-align: center;
+}
+div.nav div.nav-item {
+  flex: 1;
+  color: red;
+}
+div.left {
+  width: 50%;
+  height: 50px;
+  float: left;
+  display: flex;
+}
+div.left div.left-item {
+  flex: 1;
+}
+div.rig {
+  width: 50%;
+  height: 50px;
+  float: right;
+  display: flex;
+}
+div.rig div.rig-item {
+  flex: 1;
+}

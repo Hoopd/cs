@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./02.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- 导航条开始 -->
+        <nav class="nav">
+
+            <section class="left">
+                <section class="left-item" v-for="(item,index) in navs.navsLeft">
+                    {{item}}</section>
+            </section>
+
+
+            <section class="right">
+                <section class="right-item" v-for="(item,index) in navs.navsRight" v-html="item">
+                </section>
+            </section>
+            
+        </nav>
+        <!-- 导航条结束 -->
+    </div>
+</body>
+<script src="https://cn.vuejs.org/js/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            navs: {
+                navsLeft: ["新闻", "hao123", "地图", "视频", "贴吧", "学术", "更多"],
+                navsRight: ["<span style='color:red'>抗击肺炎</span>",
+                    "设置", "<div style='height:30px;width:60px;line-height:30px;text-align:center;border-radius:5px;background-color:#5175ef;color:white'>登陆<div>"]
+            }
+        }
+    })
+</script>
+
+</html>
